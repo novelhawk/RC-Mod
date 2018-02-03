@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OutputPath>D:\Attack on Titan\RC Mod Git\Output\AoTTG_Data\Managed\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkProfile />
+    <RootNamespace />
+    <PackageId>Hawk Mod</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Hawk, Raoh, Others</Authors>
+    <Company />
+    <Product />
+    <Description>RC Mod for ("Attack on Titan Tribute Game" by Feng) deobfuscated by $(Authors)</Description>
+    <Copyright>MIT License</Copyright>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>RELEASE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\Attack on Titan\Assemblies\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>D:\Attack on Titan\Assemblies\Assembly-UnityScript.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-UnityScript-firstpass">
+      <HintPath>D:\Attack on Titan\Assemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>D:\Attack on Titan\Assemblies\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>D:\Attack on Titan\Assemblies\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon3Unity3D">
+      <HintPath>D:\Attack on Titan\Assemblies\Photon3Unity3D.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Attack on Titan\Assemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\Attack on Titan\Assemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>D:\Attack on Titan\Assemblies\UnityScript.Lang.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
