@@ -188,28 +188,28 @@ public abstract class UIWidget : MonoBehaviour
         }
     }
 
-    public static BetterList<UIWidget> Raycast(GameObject root, Vector2 mousePos)
-    {
-        BetterList<UIWidget> list = new BetterList<UIWidget>();
-        UICamera camera = UICamera.FindCameraForLayer(root.layer);
-        if (camera != null)
-        {
-            Camera cachedCamera = camera.cachedCamera;
-            foreach (UIWidget widget in root.GetComponentsInChildren<UIWidget>())
-            {
-                if (NGUIMath.DistanceToRectangle(NGUIMath.CalculateWidgetCorners(widget), mousePos, cachedCamera) == 0f)
-                {
-                    list.Add(widget);
-                }
-            }
-            if (f__amScache14 == null)
-            {
-                f__amScache14 = (w1, w2) => w2.mDepth.CompareTo(w1.mDepth);
-            }
-            list.Sort(f__amScache14);
-        }
-        return list;
-    }
+//    public static BetterList<UIWidget> Raycast(GameObject root, Vector2 mousePos)
+//    {
+//        BetterList<UIWidget> list = new BetterList<UIWidget>();
+//        UICamera camera = UICamera.FindCameraForLayer(root.layer);
+//        if (camera != null)
+//        {
+//            Camera cachedCamera = camera.cachedCamera;
+//            foreach (UIWidget widget in root.GetComponentsInChildren<UIWidget>())
+//            {
+//                if (NGUIMath.DistanceToRectangle(NGUIMath.CalculateWidgetCorners(widget), mousePos, cachedCamera) == 0f)
+//                {
+//                    list.Add(widget);
+//                }
+//            }
+//            if (f__amScache14 == null)
+//            {
+//                f__amScache14 = (w1, w2) => w2.mDepth.CompareTo(w1.mDepth);
+//            }
+//            list.Sort(f__amScache14);
+//        }
+//        return list;
+//    }
 
     private void Start()
     {

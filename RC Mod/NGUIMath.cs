@@ -320,47 +320,48 @@ public static class NGUIMath
         return vector6.magnitude;
     }
 
-    public static unsafe float DistanceToRectangle(Vector2[] screenPoints, Vector2 mousePos)
+    public static /*unsafe*/ float DistanceToRectangle(Vector2[] screenPoints, Vector2 mousePos)
     {
-        bool flag = false;
-        int val = 4;
-        for (int i = 0; i < 5; i++)
-        {
-            Vector3 vector = screenPoints[RepeatIndex(i, 4)];
-            Vector3 vector2 = screenPoints[RepeatIndex(val, 4)];
-            if (((vector.y > mousePos.y) != (vector2.y > mousePos.y)) && (mousePos.x < ((((vector2.x - vector.x) * (mousePos.y - vector.y)) / (vector2.y - vector.y)) + vector.x)))
-            {
-                flag = !flag;
-            }
-            val = i;
-        }
-        if (flag)
-        {
-            return 0f;
-        }
-        float num3 = -1f;
-        for (int j = 0; j < 4; j++)
-        {
-            Vector3 a = screenPoints[j];
-            Vector3 b = screenPoints[RepeatIndex(j + 1, 4)];
-            float num5 = DistancePointToLineSegment(mousePos, a, b);
-            if ((num5 < num3) || (num3 < 0f))
-            {
-                num3 = num5;
-            }
-        }
-        return num3;
+//        bool flag = false;
+//        int val = 4;
+//        for (int i = 0; i < 5; i++)
+//        {
+//            Vector3 vector = screenPoints[RepeatIndex(i, 4)];
+//            Vector3 vector2 = screenPoints[RepeatIndex(val, 4)];
+//            if (((vector.y > mousePos.y) != (vector2.y > mousePos.y)) && (mousePos.x < ((((vector2.x - vector.x) * (mousePos.y - vector.y)) / (vector2.y - vector.y)) + vector.x)))
+//            {
+//                flag = !flag;
+//            }
+//            val = i;
+//        }
+//        if (flag)
+//        {
+//            return 0f;
+//        }
+//        float num3 = -1f;
+//        for (int j = 0; j < 4; j++)
+//        {
+//            Vector3 a = screenPoints[j];
+//            Vector3 b = screenPoints[RepeatIndex(j + 1, 4)];
+//            float num5 = DistancePointToLineSegment(mousePos, a, b);
+//            if ((num5 < num3) || (num3 < 0f))
+//            {
+//                num3 = num5;
+//            }
+//        }
+//        return num3;
+        return 0;
     }
 
-    public static float DistanceToRectangle(Vector3[] worldPoints, Vector2 mousePos, Camera cam)
-    {
-        Vector2[] screenPoints = new Vector2[4];
-        for (int i = 0; i < 4; i++)
-        {
-            screenPoints[i] = cam.WorldToScreenPoint(worldPoints[i]);
-        }
-        return DistanceToRectangle(screenPoints, mousePos);
-    }
+//    public static float DistanceToRectangle(Vector3[] worldPoints, Vector2 mousePos, Camera cam)
+//    {
+//        Vector2[] screenPoints = new Vector2[4];
+//        for (int i = 0; i < 4; i++)
+//        {
+//            screenPoints[i] = cam.WorldToScreenPoint(worldPoints[i]);
+//        }
+//        return DistanceToRectangle(screenPoints, mousePos);
+//    }
 
     public static Color HexToColor(uint val)
     {
